@@ -7,9 +7,6 @@ import { PlaneTakeoff, Building, Car, Wifi } from 'lucide-react';
 
 export default function SeyahatlerimPage() {
   const [activeTab, setActiveTab] = useState('ucak');
-  const [otelReservations, setOtelReservations] = useState([]);
-  const [aracReservations, setAracReservations] = useState([]);
-  const [esimOrders, setEsimOrders] = useState([]);
 
   const renderContent = () => {
     switch (activeTab) {
@@ -76,7 +73,7 @@ export default function SeyahatlerimPage() {
               </div>
               <h2 className="text-xl text-gray-700">Henüz E-sim satın almadınız.</h2>
               <p className="text-gray-500">
-                İşlem yaptıkça, satın aldığınız E-sim'lere buradan ulaşabileceksiniz.
+                İşlem yaptıkça, satın aldığınız E-sim&apos;lere buradan ulaşabileceksiniz.
               </p>
               <button className="mt-4 px-6 py-3 bg-green-500 text-white rounded-xl hover:bg-green-600 transition-colors">
                 E-sim satın al

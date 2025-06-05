@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { User, TrendingDown } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { getEuroRate } from '@/services/exchangeRate';
@@ -25,7 +24,7 @@ export default function Header() {
     const interval = setInterval(updateRate, 5 * 60 * 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [rate]);
 
   return (
     <>
