@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .form-radio {
+    @apply h-4 w-4 text-green-500 border-gray-300 focus:ring-green-500;
+  }
+  
+  .form-checkbox {
+    @apply h-4 w-4 text-green-500 border-gray-300 rounded focus:ring-green-500;
+  }
+}
