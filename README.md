@@ -1,3 +1,32 @@
+# Gurbetbiz
+
+## Teknoloji Sürümleri
+
+- Node.js: 18.17.0 LTS
+- Next.js: 13.5.6
+- React: 18.2.0
+- TypeScript: 5.0.4
+- PostgreSQL: 16
+- Tailwind CSS: 3.3.5
+
+## Başlangıç
+
+```bash
+# Node.js sürümünü ayarla
+nvm use
+
+# Bağımlılıkları yükle
+npm install
+
+# Geliştirme sunucusunu başlat
+npm run dev
+```
+
+Uygulama http://localhost:3000 adresinde çalışacaktır.
+
+## License
+All rights reserved © 2024
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
