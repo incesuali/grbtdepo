@@ -11,25 +11,25 @@ export default function Header() {
 
   return (
     <div className="bg-green-500 shadow-sm">
-      <div className="container mx-auto px-4 h-10 flex items-center">
-        <div className="flex justify-between items-center w-full">
-          <div className="flex items-center gap-1.5">
+      <div className="container mx-auto px-4 h-12 flex items-center">
+        <div className="flex justify-between items-center w-full py-1">
+          <div className="flex items-center gap-2">
             <Euro className="w-4 h-4 text-white" />
-            <span className="text-xs font-medium text-white">EURO: 44.50 TL</span>
+            <span className="text-sm font-medium text-white">EURO: 44.50 TL</span>
           </div>
-          <nav className="flex items-center gap-3">
+          <nav className="flex items-center gap-4">
             <button
-              className="flex items-center gap-1.5 px-2 hover:bg-green-400"
+              className="flex items-center gap-2 px-3 py-1 hover:bg-green-400 rounded-sm"
             >
               <TurkishFlag />
-              <span className="text-sm text-white">TR</span>
+              <span className="text-[16px] text-white">TR</span>
             </button>
             <button
               onClick={() => setIsLoginModalOpen(true)}
-              className="flex items-center gap-1.5 px-2 hover:bg-green-400"
+              className="flex items-center gap-2 px-3 py-1 hover:bg-green-400 rounded-sm"
             >
-              <User className="w-4 h-4 text-white" />
-              <span className="text-sm text-white">Giriş Yap</span>
+              <User className="w-5 h-5 text-white" />
+              <span className="text-[15px] text-white">Giriş Yap</span>
             </button>
           </nav>
         </div>
