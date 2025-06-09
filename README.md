@@ -2,12 +2,42 @@
 
 ## Teknoloji Sürümleri
 
-- Node.js: 18.17.0 LTS
+- Node.js: 18.17.0 LTS (Sabit sürüm)
 - Next.js: 13.5.6
 - React: 18.2.0
 - TypeScript: 5.0.4
 - PostgreSQL: 16
 - Tailwind CSS: 3.3.5
+
+## Node.js Sürüm Kontrolü
+
+Bu proje Node.js 18.17.0 sürümüne sabitlenmiştir. Sürüm kontrolü 3 farklı yerde yapılmaktadır:
+
+1. `./nvmrc` dosyası - nvm için sürüm kontrolü
+   ```
+   18.17.0
+   ```
+
+2. `./package.json` içinde engines kısmı - npm için sürüm kontrolü
+   ```json
+   "engines": {
+     "node": "18.17.0",
+     "npm": "9.6.7"
+   }
+   ```
+
+3. `./check-version.js` - runtime sürüm kontrolü
+   ```javascript
+   if (process.version !== 'v18.17.0') {
+     console.error('🚨 HATA: Bu proje SADECE Node.js 18.17.0 ile çalışır!');
+     process.exit(1);
+   }
+   ```
+
+⚠️ Proje sadece Node.js 18.17.0 ile çalışır. Farklı bir sürüm kullanıldığında:
+- nvm otomatik olarak 18.17.0'a geçiş yapar
+- npm install sırasında uyarı verir
+- npm run dev çalıştırıldığında hata verir
 
 ## Başlangıç
 

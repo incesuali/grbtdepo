@@ -6,13 +6,13 @@ export default function Home() {
   return (
     <main className="min-h-screen">      
       {/* Hero Section */}
-      <div className="bg-green-500 text-center text-white pb-32 pt-16">
+      <div className="bg-green-500 text-center text-white pb-20 pt-8">
         <div className="container mx-auto px-4">
           <h1 className="text-5xl font-bold mb-2">
             <span className="text-white">gurbet</span>
             <span className="text-black">biz</span>
           </h1>
-          <h2 className="text-xl font-light">Hoşgeldin Gurbetçi</h2>
+          <h2 className="text-xl font-light">Gurbetten Memlekete, Yol Arkadaşınız!</h2>
         </div>
       </div>
 
@@ -54,7 +54,7 @@ export default function Home() {
 
       {/* Search Form */}
       <div className="container mx-auto px-4 mt-24">
-        <div className="bg-white rounded-[32px] shadow-lg p-8">
+        <div className="bg-white rounded-[32px] shadow-lg p-8 border border-gray-200">
           <div className="flex items-center mb-8">
             <div className="flex gap-6">
               <label className="flex items-center gap-2 cursor-pointer">
@@ -191,7 +191,7 @@ export default function Home() {
         </div>
 
         {/* İşlem Butonları */}
-        <div className="bg-white rounded-[32px] shadow-lg mt-4 p-6">
+        <div className="bg-white rounded-[32px] shadow-lg mt-6 p-6 border border-gray-200">
           <div className="flex justify-between items-center">
             <Link href="/check-in" className="flex items-center gap-2 text-green-500 hover:text-green-600 transition-colors">
               <PlaneTakeoff className="w-5 h-5" />
@@ -220,7 +220,7 @@ export default function Home() {
       </div>
 
       {/* Mobil Uygulama Banner */}
-      <div className="container mx-auto px-4 mt-12">
+      <div className="container mx-auto px-4 mt-6">
         <div className="bg-green-500 rounded-[32px] shadow-lg p-6 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-green-400/30 via-white/20 to-green-400/30 pointer-events-none"></div>
           <div className="relative flex items-center justify-between">
@@ -241,25 +241,25 @@ export default function Home() {
                 <p className="text-white text-lg mt-1">Avrupa'dan Türkiye'ye Yol Arkadaşınız</p>
               </div>
             </div>
-            <div className="flex gap-3">
+            <div className="flex gap-4">
               {/* App Store Butonu */}
               <a href="#" className="block">
                 <Image 
-                  src="/images/app-store-badge.svg"
+                  src="/images/store-badges/app-store-black.png"
                   alt="Download on the App Store"
-                  width={120}
-                  height={40}
-                  className="h-[40px] w-auto"
+                  width={156}
+                  height={50}
+                  className="h-[50px] w-auto"
                 />
               </a>
               {/* Google Play Butonu */}
               <a href="#" className="block">
                 <Image 
-                  src="/images/google-play-badge.svg"
+                  src="/images/store-badges/google-play-black.png"
                   alt="Get it on Google Play"
-                  width={135}
-                  height={40}
-                  className="h-[40px] w-auto"
+                  width={156}
+                  height={50}
+                  className="h-[50px] w-auto"
                 />
               </a>
             </div>

@@ -2,33 +2,34 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { User } from 'lucide-react';
+import { User, Euro } from 'lucide-react';
 import LoginModal from './LoginModal';
+import TurkishFlag from './TurkishFlag';
 
 export default function Header() {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-sm">
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold text-green-600">
-            gurbet.biz
-          </Link>
-
-          <nav className="flex items-center gap-6">
-            <Link href="/ucuslar" className="text-gray-600 hover:text-gray-900">
-              Uçuşlar
-            </Link>
-            <Link href="/oteller" className="text-gray-600 hover:text-gray-900">
-              Oteller
-            </Link>
+    <div className="bg-green-500 shadow-sm">
+      <div className="container mx-auto px-4 h-10 flex items-center">
+        <div className="flex justify-between items-center w-full">
+          <div className="flex items-center gap-1.5">
+            <Euro className="w-4 h-4 text-white" />
+            <span className="text-xs font-medium text-white">EURO: 44.50 TL</span>
+          </div>
+          <nav className="flex items-center gap-3">
+            <button
+              className="flex items-center gap-1.5 px-2 hover:bg-green-400"
+            >
+              <TurkishFlag />
+              <span className="text-sm text-white">TR</span>
+            </button>
             <button
               onClick={() => setIsLoginModalOpen(true)}
-              className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-xl hover:bg-gray-50"
+              className="flex items-center gap-1.5 px-2 hover:bg-green-400"
             >
-              <User className="w-5 h-5" />
-              <span>Giriş Yap</span>
+              <User className="w-4 h-4 text-white" />
+              <span className="text-sm text-white">Giriş Yap</span>
             </button>
           </nav>
         </div>
@@ -38,6 +39,6 @@ export default function Header() {
         isOpen={isLoginModalOpen} 
         onClose={() => setIsLoginModalOpen(false)} 
       />
-    </header>
+    </div>
   );
-} 
+}
